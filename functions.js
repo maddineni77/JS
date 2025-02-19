@@ -97,7 +97,8 @@ function EvenOdd(number){
         console.log('odd number')
     }
 }
- var ipt=EvenOdd()
- console.log(ipt)
+EvenOdd(2)
+EvenOdd(3)
+
 
 
