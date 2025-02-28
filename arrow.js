@@ -19,12 +19,24 @@ function add(a,b){ //named function
 }
 var add=(a,b)=>a+b // Arrow function
 console.log(add(233,322))
+
+
+
+
 //3.
 function square(n){
     return n*n
 }
 var square =n=>n*n
 console.log(square(25))
+
+
+
+
+
+
+
+
 //4.single parameter in arrow function
 var square=(n)=>n*n// with paranthesis
 var square=n=>n*n// without paranthesis is just for to look code clean and readability purpose
