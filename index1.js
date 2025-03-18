@@ -45,6 +45,7 @@ function getData(){
     .then(res=>res.json())
     .then(data=> displayData(data))
     .catch(err=>console.log(err))
+
 }
 function displayData(products){
     container.innerHTML=``
@@ -56,8 +57,11 @@ function displayData(products){
         <p class="price">price-${obj.price}$</p>
         <p class="description">description:${obj.description}</p>
         <button class="btn " onclick=deleteData('${obj.id}')>Delete</button>`
+    
         container.appendChild(item)
+    
     })
+    
 
 }
 

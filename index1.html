@@ -8,19 +8,29 @@
         .container{
         
             border:2px solid grey;
+            padding: 3px;
+            display: grid;
+            grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+            gap: 10px;
         
-        
+            
 
         }
         .item{
             border: 1px solid grey;
-            margin:5px;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow:hidden;
+            
 
         }
+        .description{
+        white-space: nowrap;
+        overflow:hidden ;
+        text-overflow: ellipsis;
+     }
         .img:hover{
     transform: rotate(360deg);
     transition: 1.2s ease-in-out;
@@ -94,6 +104,13 @@
     margin-left: 10px;
 }
 
+        .loading {
+    background-color: #ccc;
+    pointer-events: none;
+}
+
+
+        
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -103,23 +120,7 @@
         transform: rotate(360deg);
     }
 }
-.loading {
-    background-color: #ccc;
-    pointer-events: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-    </style>
+</style>
 </head>
 <body>
     <div class="input" >
