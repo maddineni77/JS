@@ -13,6 +13,18 @@
       }
     },
     {
+      "id": "4",
+      "title": "Mens Casual Slim Fit",
+      "price": 15.99,
+      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
+    },
+    {
       "id": "5",
       "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
       "price": 695,
@@ -22,6 +34,18 @@
       "rating": {
         "rate": 4.6,
         "count": 400
+      }
+    },
+    {
+      "id": "6",
+      "title": "Solid Gold Petite Micropave ",
+      "price": 168,
+      "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 70
       }
     },
     {
@@ -193,28 +217,10 @@
       }
     },
     {
-      "id": "163c",
-      "title": "puma",
-      "price": "2300",
-      "description": "daily ware"
-    },
-    {
-      "id": "299f",
-      "title": "nike ",
-      "price": "3400",
-      "description": "office ware causal shirt with extreme comfort "
-    },
-    {
-      "id": "6d2c",
-      "title": "hrx",
-      "price": "night ware",
-      "description": "strectable with comfort"
-    },
-    {
-      "id": "d259",
-      "title": "Zara white shirt ",
-      "price": "3900",
-      "description": "high look with comfortness"
+      "id": "c2e5",
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": "500",
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"
     }
   ]
 }
