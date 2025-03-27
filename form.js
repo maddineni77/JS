@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-import{getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,sendPasswordResetEmail} from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
+import{getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,sendPasswordResetEmail,GoogleAuthProvider,
+    signInWithPopup} from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 import{getFirestore, setDoc,doc,} from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js"
 
 const firebaseConfig = {
@@ -17,7 +18,7 @@ const firebaseConfig = {
   document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".toggle").addEventListener("click", toggleForm);
     document.getElementById("auth-form").addEventListener("submit", handleAuth);
-
+    document.getElementById("googleSignIn").addEventListener("click", googleSignIn);
 
 });
 window.toggleForm=toggleForm
@@ -39,7 +40,8 @@ function toggleForm() {
         nameField.style.display = "none";
         toggleText.innerText = "Don't have an account? Register";
     }
-}async function forgotPassword() {
+}
+async function forgotPassword() {
     let email = document.getElementById("email").value;
     let errorMessage = document.getElementById("error-message");
 
@@ -55,6 +57,26 @@ function toggleForm() {
         errorMessage.innerText = error.message;
     }
 }
+
+async function googleSignIn() {
+    const provider = new GoogleAuthProvider(); // Create Google provider instance
+    try {
+        const result = await signInWithPopup(auth, provider); // Show Google Sign-In popup
+        const user = result.user;
+
+        // Store user data in Firestore (if first-time login)
+        const userRef = doc(db, "users", user.uid);
+        await setDoc(userRef, {
+            fullname: user.displayName, 
+            email: user.email
+        }, { merge: true });
+
+        alert(`Welcome, ${user.displayName}!`);
+    } catch (error) {
+        document.getElementById("error-message").innerText = error.message;
+    }
+}
+
 
 
 async function handleAuth(event) {
