@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+            gap: 10px;
+        }
+        .item{
+            text-align: center;
+            border-radius: 2%;
+            border:1px solid goldenrod;
+
+        }
+        .image{
+            width: 80%;
+            height: 200px;
+        }
+        .btndele{
+            padding: 5px;
+            background-color: red;
+            color:black;
+            border-radius: 5%;
+        }
+        .category{
+            width: 50%;
+            height: 10px;
+            padding: 15px;
+            border: 2px solid blue;
+            margin-bottom: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <select id="category" class="category" required>
+        <option value="" class="" >---select category---</option>
+        <option value="electronics" class="electronics">Electronics</option>
+        <option value="men's clothing" class="mens">mens clothing</option>
+        <option value="women's clothing" class="womens">Womens clothing</option>
+        <option value="jewelery" class="jewellary">Jewellary</option>
+    </select>
+    <div class="container"></div>
+    <script src="taskonlocalstorage.js"></script>
+    
+</body>
+</html>
