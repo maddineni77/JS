@@ -15,18 +15,7 @@ function displayData(){
     console.log("display data")
 }
 displayData()
-async function getData(){
-    try{
-        let res=  await fetch("https://dummyjson.com/products")
-        let data= await res.json()
-        console.log(data)
-    }catch (err){
-        console.error(err)
 
-    }
-    
-}
-getData()
 let arr=[1,2,3,"jddns",5,true]
 let arr1=[...arr,4,5,false]
 function read(...arr2){
@@ -37,4 +26,4 @@ read(arr1)
 
 
  export  default displayData
- export {obj,a,disc,getData,arr1,read}
+ export {obj,a,disc,arr1,read}
